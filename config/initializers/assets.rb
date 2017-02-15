@@ -8,4 +8,6 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+if Gem::Version.new(Sprockets::VERSION) >= Gem::Version.new('4.x')
+  Rails.application.config.assets.precompile += %w(test1.html test2.html)
+end
