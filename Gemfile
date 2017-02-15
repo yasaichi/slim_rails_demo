@@ -46,3 +46,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# repro the bug
+gem 'slim-rails', github: 'slim-template/slim-rails', tag: 'v3.1.2'
+
+# fix the bug
+# gem 'slim-rails', github: 'yasaichi/slim-rails', branch: 'pass-context-object-to-render'
